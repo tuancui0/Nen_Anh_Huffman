@@ -1,27 +1,24 @@
-# Image Compression using DCT + Huffman + RLE + PSNR
+# Image Compression using Huffman + RLE + PSNR
 
 Ứng dụng mô phỏng các phương pháp **nén ảnh có mất dữ liệu (lossy)** và **không mất dữ liệu (lossless)**, bao gồm:
 
-- **DCT (Discrete Cosine Transform)** – nén mất dữ liệu
-- **Quantization** – lượng tử hóa hệ số DCT
 - **RLE (Run-Length Encoding)** – mã hóa chiều dài chạy
 - **Huffman Coding** – mã hóa entropy
 - **PSNR** – đánh giá chất lượng ảnh tái tạo
 
 Hệ thống giúp người dùng:
 - Nén ảnh bằng nhiều phương pháp
-- So sánh hiệu quả nén giữa **DCT+Huffman**, **DCT+RLE**, và **RLE thuần**
+- So sánh hiệu quả nén giữa **Huffman**, **RLE**, và **RLE thuần**
 - Tính toán PSNR để đánh giá chất lượng ảnh sau giải nén
 - Xem sự khác biệt về kích thước, tốc độ và chất lượng
   
 
 ## 🚀 **Tính năng chính**
 - Xử lý ảnh RGB → YCbCr, nén chủ yếu trên kênh Y.
-- Chia ảnh thành block 8×8 → thực hiện **DCT + Quantization**.
 - Mã hóa dữ liệu bằng:
   - **Huffman**
   - **RLE**
-  - Hoặc kết hợp **DCT + RLE** / **DCT + Huffman**
+  - Hoặc kết hợp **RLE** / **Huffman**
 - Hiển thị thống kê:
   - Kích thước trước / sau nén
   - Tỉ lệ nén
